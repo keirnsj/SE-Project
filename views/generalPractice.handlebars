@@ -1,0 +1,140 @@
+<head>
+    <meta charset="UTF-8">
+    <title>GRE Study Aid</title>
+    <link rel="stylesheet" href="main_style.css" type="text/css">
+</head>
+<body>
+    <div class="headerTop">
+        <a href="/">Home</a>
+        <a href="products">Help</a>
+    </div>
+    <br/>
+    <div class="header">
+        <h1>GRE General Prep</h1>
+        <h2>Practice exam</h2>
+    </div>
+
+    <div id="general1">
+        <h2>Q1. In recent years, the city has been plagued by _____, and the mayor’s chances of reelection appear _____.</h2>
+        <form name="generalQ1" id="generalQ1" action="generalChecker.js">
+            <input type="radio" id="general1A" name="general1" value="A">
+            <label for="general1A">Violence….slim</label><br>
+            <input type="radio" id="general1B" name="general1" value="B">
+            <label for="general1B">Improvements…likely</label><br>
+            <input type="radio" id="general1C" name="general1" value="C">
+            <label for="general1C">Visitors…certain</label><br>
+            <input type="radio" id="general1D" name="general1" value="D">
+            <label for="general1D">Gardeners….unlikely</label><br>
+        </form>
+    </div>
+
+    <div id="general2">
+        <h2>Q2. Once we came to know Andreas better, it became clear to us that all of his stories of wealth and fame were just a _____.</h2>
+        <form name="generalQ2" id="generalQ2" action="generalChecker.js">
+            <input type="radio" id="general2A" name="general2" value="A">
+            <label for="general2A">Biography</label><br>
+            <input type="radio" id="general2B" name="general2" value="B">
+            <label for="general2B">Lullaby</label><br>
+            <input type="radio" id="general2C" name="general2" value="C">
+            <label for="general2C">Ruse</label><br>
+            <input type="radio" id="general2D" name="general2" value="D">
+            <label for="general2D">Lunacy</label><br>
+        </form>
+    </div>
+
+    <div id="general3">
+        <h2>Q3. As a teacher of young children, I always find the last few days before summer vacation trying, because the students are especially _____.</h2>
+        <form name="generalQ3" id="generalQ3" action="generalChecker.js">
+            <input type="radio" id="general3A" name="general3" value="A">
+            <label for="general3A">Coordinated</label><br>
+            <input type="radio" id="general3B" name="general3" value="B">
+            <label for="general3B">Unruly</label><br>
+            <input type="radio" id="general3C" name="general3" value="C">
+            <label for="general3C">Charitable</label><br>
+            <input type="radio" id="general3D" name="general3" value="D">
+            <label for="general3D">Ingenious</label><br>
+        </form>
+    </div>
+
+    <div id="general4">
+        <h2>Q4. Over the course of his life, Clif has worked in the circus, flown planes as a stunt pilot, and had a number of other _____ jobs.</h2>
+        <form name="generalQ4" id="generalQ4" action="generalChecker.js">
+            <input type="radio" id="general4A" name="general4" value="A">
+            <label for="general4A">Commonplace</label><br>
+            <input type="radio" id="general4B" name="general4" value="B">
+            <label for="general4B">Flamboyant</label><br>
+            <input type="radio" id="general4C" name="general4" value="C">
+            <label for="general4C">Unconventional</label><br>
+            <input type="radio" id="general4D" name="general4" value="D">
+            <label for="general4D">Charming</label><br>
+        </form>
+    </div>
+
+    <div id="general5">
+        <h2>Reading Comprehension</h2>
+        <p>Technology is rapidly expanding the scope of capabilities for both professional and personal use; such is the case with smart phones. Professionals now have devices available to them capable of digital media, internet access, phone communication, multi-person scheduling and office tools for documents and presentations. Businesspeople that are often mobile may maximize the use of these critical features on smart phones. Individuals who simply enjoy the luxury of multi-function devices often use these devices for frivolous pursuits such as downloading catchy ring tones, instant messaging about the latest gossip and looking up the world record for most cans crushed on one’s head during the Superbowl. This fusion of capabilities and increased availability of such devices could be a sign of a growing blend in society between work and personal life, or individuals could simply be taking a luxurious approach to their connectivity in personal lives.</p>
+        <h2>Q5. The term “frivolous” implies that the author</h2>
+        <form name="generalQ5" id="generalQ5" action="generalChecker.js">
+            <input type="radio" id="general5A" name="general5" value="A">
+            <label for="general5A">is fascinated by the endless capabilities on smart phones.</label><br>
+            <input type="radio" id="general5B" name="general5" value="B">
+            <label for="general5B">hopes that technology ceases to expand its scope.</label><br>
+            <input type="radio" id="general5C" name="general5" value="C">
+            <label for="general5C">believes that the average individual does not need a smart phone.</label><br>
+            <input type="radio" id="general5D" name="general5" value="D">
+            <label for="general5D">wants to see more developments added to smart phone technology.</label><br>
+        </form>
+        <h2>Q6. What is the purpose of the conclusion sentence?</h2>
+        <form name="generalQ6" id="generalQ6" action="generalChecker.js">
+            <input type="radio" id="general6A" name="general6" value="A">
+            <label for="general6A">Draw a conclusion about what we know smart phones can do</label><br>
+            <input type="radio" id="general6B" name="general6" value="B">
+            <label for="general6B">Assume where technology is headed and how it will affect society</label><br>
+            <input type="radio" id="general6C" name="general6" value="C">
+            <label for="general6C">Comment on human connectivity through the use of smart phones</label><br>
+            <input type="radio" id="general6D" name="general6" value="D">
+            <label for="general6D">Predict how the government will regulate and guide future technology</label><br>
+        </form>
+    </div>
+
+    <input type="button" value="Submit Exam" onclick="submitGeneral()" />
+
+    <div>
+        <h2 id="generalResults"></h2>
+    </div>
+
+    <script>
+    submitGeneral = function(){
+        let userScore = 0;
+        if (document.getElementById("general1A").checked) {
+            userScore ++;
+        }
+        if (document.getElementById("general2C").checked) {
+            userScore ++;
+        }
+        if (document.getElementById("general3B").checked) {
+            userScore ++;
+        }
+        if (document.getElementById("general4C").checked) {
+            userScore ++;
+        }
+        if (document.getElementById("general5A").checked) {
+            userScore ++;
+        }
+        if (document.getElementById("general6B").checked) {
+            userScore ++;
+        }
+        
+        document.getElementById("generalResults").innerHTML = "Results: "+ userScore + "/6";
+
+    }
+    </script>
+
+<style>
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+</style>    
+</body>

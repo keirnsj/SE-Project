@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="main_style.css" type="text/css">
+</head>
+<body onload="sendJSON()">
+    <div class="headerTop">
+        <a href="/">Home</a>
+        <a href="products">Help</a>
+    </div>
+    <br/>
+    <div class="header">
+        <h1>GRE Study Aid</h1>
+        <h2>Testing Locations</h2>
+        <Script>
+            function sendJSON(){
+            
+                let text = document.querySelector('#text');
+                let longitude = document.querySelector('#longitude');
+                let latitude = document.querySelector('#latitude');
+                
+                // Creating a XHR object
+                let xhr = new XMLHttpRequest();
+                let url = "http://flip1.engr.oregonstate.edu:59662/";
+            
+                // open a connection
+                xhr.open("POST", url, true);
+    
+                // Set the request header i.e. which type of content you are sending
+                xhr.setRequestHeader("Content-Type", "application/json");
+    
+                // Create a state change callback
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+    
+                        // Print received data from server
+                        //map.innerHTML = this.responseText;
+    
+                    }
+                };
+    
+                // Converting JSON data to string
+                var data = JSON.stringify({ "text": ["Seattle University, Seattle, Washington"], "longitude": [-122.3173], "latitude": [47.6092]});
+    
+                // Sending data with the request
+                xhr.send(data);
+            } 
+        </Script>
+        <div id="map_service" style="width:40%; height:30%; margin: auto;">
+            <iframe src="http://flip1.engr.oregonstate.edu:59661/" width="800" height="600"></iframe>
+        </div>
+        
+        <ul>
+            <li>Ohio</li>
+                <ul>
+                    <li>Columbus</li>
+                    <li>Athens</li>
+                    <li>Zanesville</li>
+                </ul>
+            <li>West Virginia</li>
+                <ul>
+                    <li>Morgantown</li>
+                    <li>Bridgeport</li>
+                    <li>Fairmont</li>
+                </ul>
+            <li>Oregon</li>
+                <ul>
+                    <li>Corvalis</li>
+                    <li>Salem</li>
+                    <li>Portland</li>
+                </ul>
+        </ul>
+    </div>
+        <style>
+            body {
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            </style>
+    <div class="footer">
+        <p>Footer</p>
+    </div>        
+</body>

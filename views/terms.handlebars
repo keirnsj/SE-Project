@@ -1,0 +1,104 @@
+<head>
+    <meta charset="UTF-8">
+    <title>GRE Study Aid</title>
+    <link rel="stylesheet" href="main_style.css" type="text/css">
+</head>
+<body>
+    <div class="headerTop">
+        <a href="/">Home</a>
+        <a href="products">Help</a>
+    </div>
+    <br/>
+    <div class="header">
+        <h1>Terms</h1>
+        <h2>What terms would you like to find?</h2>
+        <h2><a href="generalTerms">General</a></h2>
+        <h2><a href="mathTerms">Math</a></h2>
+        <h2><a href="chemistryTerms">Chemistry</a></h2>
+    </div>
+    <div class="termFind">
+        Manually search for terms.
+        <button onclick="termSearch()">Search</button>
+        <p id="termPop"></p>
+        <script>
+        function termSearch() {
+            var term = prompt("Please enter the term you would like to find", "Term");
+            let term2 = term.toLowerCase();
+            if (term != null) {
+                if (term2 == "absolute zero") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59691/chemistryTerms/absoluteZero";
+                    };
+                
+                if (term2 == "anomaly") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59691/generalTerms/anomaly";
+                    };
+
+                if (term2 == "assuage") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59691/generalTerms/assuage";
+                    };
+
+                if (term2 == "circumference") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59691/mathTerms/circumference";
+                    }; 
+
+                if (term2 == "cone") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59691/mathTerms/cone";
+                    };
+
+                if (term2 == "entropy") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59691/chemistryTerms/entropy";
+                    };
+
+                if (term2 == "equivocal") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59691/generalTerms/equivocal";
+                    }; 
+
+                if (term2 == "half-life") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59691/chemistryTerms/halfLife";
+                    };
+
+                if (term2 == "hypotenuse") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59691/mathTerms/hypotenuse";
+                    }; 
+
+                if (term2 == "ideal gas") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59691/chemistryTerms/idealGas";
+                    }; 
+
+                if (term2 == "lucid") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59691/generalTerms/lucid";
+                    }; 
+
+                if (term2 == "perimeter") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59691/mathTerms/perimeter";
+                    }; 
+
+                if (term2 == "photon") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59691/chemistryTerms/photon";
+                    }; 
+
+                if (term2 == "precipitate") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59691/generalTerms/precipitate";
+                    }; 
+
+                if (term2 == "supplementary") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59691/mathTerms/supplementary";
+                                   
+                
+                } else {
+                    time.sleep(1);
+                    document.getElementById("termPop").innerHTML =
+                    "Sorry, " + term + " is not a term we have";
+                }
+            }
+        }
+        </script>   
+    </div>    
+<style>
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+</style>    
+</body>

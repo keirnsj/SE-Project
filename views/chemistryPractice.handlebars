@@ -1,0 +1,141 @@
+<head>
+    <meta charset="UTF-8">
+    <title>GRE Study Aid</title>
+    <link rel="stylesheet" href="main_style.css" type="text/css">
+</head>
+<body>
+    <div class="headerTop">
+        <a href="/">Home</a>
+        <a href="products">Help</a>
+    </div>
+    <br/>
+    <div class="header">
+        <h1>GRE Chemistry Prep</h1>
+        <h2>Practice exam</h2>
+    </div>
+
+       <div id="chemistry1">
+        <h2>Q1. Which of the following has the largest radius? </h2>
+        <form name="chemQ1" id="chemQ1">
+            <input type="radio" id="chemistry1A" name="chemistry1" value="A">
+            <label for="chemistry1A">K+</label><br>
+            <input type="radio" id="chemistry1B" name="chemistry1" value="B">
+            <label for="chemistry1B">Ar</label><br>
+            <input type="radio" id="chemistry1C" name="chemistry1" value="C">
+            <label for="chemistry1C">Cl-</label><br>
+            <input type="radio" id="chemistry1D" name="chemistry1" value="D">
+            <label for="chemistry1D">S2-</label><br>
+        </form>
+    </div>
+
+    <div id="chemistry2">
+        <h2>Q2. If 4.0g of a gas occupies 11.2L at 0.0oC and 0.25 atmosphere, then the molecular mass of the gas is </h2>
+        <form name="chemQ2" id="chemQ2" action="chemistryChecker.js">
+            <input type="radio" id="chemistry2A" name="chemistry2" value="A">
+            <label for="chemistry2A">8.0g</label><br>
+            <input type="radio" id="chemistry2B" name="chemistry2" value="B">
+            <label for="chemistry2B">16g</label><br>
+            <input type="radio" id="chemistry2C" name="chemistry2" value="C">
+            <label for="chemistry2C">32g</label><br>
+            <input type="radio" id="chemistry2D" name="chemistry2" value="D">
+            <label for="chemistry2D">48g</label><br>
+        </form>
+    </div>
+
+    <div id="chemistry3">
+        <h2>Q3. A high equivalent weight is desirable for compounds used as primary standards because </h2>
+        <form name="chemQ3" id="chemQ3" action="chemistryChecker.js">
+            <input type="radio" id="chemistry3A" name="chemistry3" value="A">
+            <label for="chemistry3A">Such compounds are generally easier to purify</label><br>
+            <input type="radio" id="chemistry3B" name="chemistry3" value="B">
+            <label for="chemistry3B">such compounds are generally hygroscopic</label><br>
+            <input type="radio" id="chemistry3C" name="chemistry3" value="C">
+            <label for="chemistry3C">larger compounds generally contain less surface water</label><br>
+            <input type="radio" id="chemistry3D" name="chemistry3" value="D">
+            <label for="chemistry3D">weighing errors are minimized</label><br>
+        </form>
+    </div>
+
+    <div id="chemistry4">
+        <h2>Q4. Given that a certain organic compound absorbs light in the visible region, it CANNOT be true that it </h2>
+        <form name="chemQ4" id="chemQ4" action="chemistryChecker.js">
+            <input type="radio" id="chemistry4A" name="chemistry4" value="A">
+            <label for="chemistry4A">is aromatic</label><br>
+            <input type="radio" id="chemistry4B" name="chemistry4" value="B">
+            <label for="chemistry4B">is an alkane</label><br>
+            <input type="radio" id="chemistry4C" name="chemistry4" value="C">
+            <label for="chemistry4C">is colored</label><br>
+            <input type="radio" id="chemistry4D" name="chemistry4" value="D">
+            <label for="chemistry4D">contains a nitro group</label><br>
+        </form>
+    </div>
+
+    <div id="chemistry5">
+        <h2>Q5. The aside ion, N3-, is isoelectronic with which of the following? </h2>
+        <form name="chemQ5" id="chemQ5" action="chemistryChecker.js">
+            <input type="radio" id="chemistry5A" name="chemistry5" value="A">
+            <label for="chemistry5A">NO2-</label><br>
+            <input type="radio" id="chemistry5B" name="chemistry5" value="B">
+            <label for="chemistry5B">NO2</label><br>
+            <input type="radio" id="chemistry5C" name="chemistry5" value="C">
+            <label for="chemistry5C">CO2</label><br>
+            <input type="radio" id="chemistry5D" name="chemistry5" value="D">
+            <label for="chemistry5D">SO2</label><br>
+        </form>
+    </div>
+
+    <div id="chemistry6">
+        <h2>Q6. Which of the following is another way to express the concentration of a glucose solution that is 0.01 percent by weight?</h2>
+        <form name="chemQ6" id="chemQ6" action="chemistryChecker.js">
+            <input type="radio" id="chemistry6A" name="chemistry6" value="A">
+            <label for="chemistry6A">1.0 ppb</label><br>
+            <input type="radio" id="chemistry6B" name="chemistry6" value="B">
+            <label for="chemistry6B">100ppm</label><br>
+            <input type="radio" id="chemistry6C" name="chemistry6" value="C">
+            <label for="chemistry6C">1.0 ppt</label><br>
+            <input type="radio" id="chemistry6D" name="chemistry6" value="D">
+            <label for="chemistry6D">1.0%</label><br>
+        </form>
+    </div>
+
+    <input type="button" value="Submit Exam" onclick="submitChemistry()" />
+
+    <div>
+        <h2 id="chemResults"></h2>
+    </div>
+
+    <script>
+    submitChemistry = function(){
+        let userScore = 0;
+        if (document.getElementById("chemistry1D").checked) {
+            userScore ++;
+        }
+        if (document.getElementById("chemistry2B").checked) {
+            userScore ++;
+        }
+        if (document.getElementById("chemistry3D").checked) {
+            userScore ++;
+        }
+        if (document.getElementById("chemistry4B").checked) {
+            userScore ++;
+        }
+        if (document.getElementById("chemistry5C").checked) {
+            userScore ++;
+        }
+        if (document.getElementById("chemistry6B").checked) {
+            userScore ++;
+        }
+        
+        document.getElementById("chemResults").innerHTML = "Results: "+ userScore + "/6";
+
+    }
+    </script>
+
+<style>
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+</style>    
+</body>
