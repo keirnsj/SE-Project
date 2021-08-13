@@ -1,0 +1,191 @@
+<head>
+    <meta charset="UTF-8">
+    <title>GRE Study Aid</title>
+    <link rel="stylesheet" href="main_style.css" type="text/css">
+    <script>
+    function examHelp() {
+    alert("You can click the Home button to go back to the home page. You can answer the questions by interacting with the radio buttons or text fields. When you are finished with the questions, you can hit the Submit Exam button to check your results.");
+    }
+    </script>
+</head>
+<body>
+    <div class="headerTop">
+        <a href="/" class="topButton">Home</a>
+        <button onclick="examHelp()" class="topButton">Help</button>
+    </div>
+    <br/>
+    <div class="header">
+        <h1 class="mh1">GRE Math Prep</h1> <br>
+        <h2 class="h2">Practice exam</h2>
+    </div>
+
+    <div id="math1">
+        <h2 class="h3">Q1. Alan has two more than twice as many chocolates as does Alice, and half as many chocolates as does Nadia. If Alice has ‘a’ number of chocolates, then in terms of ‘a’, how many chocolates do Alan, Alice and Nadia have?</h2>
+        <form name="mathQ1" id="mathQ1" action="mathChecker.js">
+            <input type="radio" id="math1A" name="math1" value="A">
+            <label for="math1A">2a+4</label><br>
+            <input type="radio" id="math1B" name="math1" value="B">
+            <label for="math1B">5a+5</label><br>
+            <input type="radio" id="math1C" name="math1" value="C">
+            <label for="math1C">6a+7</label><br>
+            <input type="radio" id="math1D" name="math1" value="D">
+            <label for="math1D">7a+6</label><br>
+        </form>
+    </div>
+
+    <div id="math2">
+        <h2 class="h3">Q2. Milk needs to be thinned to a ratio of 3 parts milk to 2 parts water. The milk-man has by mistake added water so that he has 8 liters of milk which is half water and half milk. What must he add to make the proportions of the mixture correct?</h2>
+        <form name="mathQ2" id="mathQ2" action="mathChecker.js">
+            <input type="radio" id="math2A" name="math2" value="A">
+            <label for="math2A">1 liter milk</label><br>
+            <input type="radio" id="math2B" name="math2" value="B">
+            <label for="math2B">1 liter water</label><br>
+            <input type="radio" id="math2C" name="math2" value="C">
+            <label for="math2C">2 liters milk</label><br>
+            <input type="radio" id="math2D" name="math2" value="D">
+            <label for="math2D">3 Liter milk</label><br>
+        </form>
+    </div>
+
+    <div id="math3">
+        <h2 class="h3">Q3. A mixed team of four young researchers is to be chosen from a group of 7 male and 5 female students.</h2>
+        <h2 class="h3">Quantity A - The number of different research teams with 3 female students and 1 male student</h2>
+        <h2 class="h3">Quantity B - 66</h2>
+        <form name="mathQ3" id="mathQ3" action="mathChecker.js">
+            <input type="radio" id="math3A" name="math3" value="A">
+            <label for="math3A">Quantity A is greater</label><br>
+            <input type="radio" id="math3B" name="math3" value="B">
+            <label for="math3B">Quantity B is greater</label><br>
+            <input type="radio" id="math3C" name="math3" value="C">
+            <label for="math3C">Both Quantities are equal</label><br>
+            <input type="radio" id="math3D" name="math3" value="D">
+            <label for="math3D">The relationship cannot be determined</label><br>
+        </form>
+    </div>
+
+    <div id="math4">
+        <h2 class="h3">Q4. In a particular Zoo, there are 30 animals, such that 14 of these animals like to eat white meat, whereas 13 animals like to eat grains. 9 animals are neither fond of white meat nor grains.</h2>
+        <h2 class="h3">Quantity A - The number of animals which eat both white meat and grains</h2>
+        <h2 class="h3">Quantity B - 7</h2>
+        <form name="mathQ4" id="mathQ4" action="mathChecker.js">
+            <input type="radio" id="math4A" name="math4" value="A">
+            <label for="math4A">Quantity A is greater</label><br>
+            <input type="radio" id="math4B" name="math4" value="B">
+            <label for="math4B">Quantity B is greater</label><br>
+            <input type="radio" id="math4C" name="math4" value="C">
+            <label for="math4C">Both Quantities are equal</label><br>
+            <input type="radio" id="math4D" name="math4" value="D">
+            <label for="math4D">The relationship cannot be determined</label><br>
+        </form>
+    </div>
+
+    <div id="math5">
+        <h2 class="h3">Numeric Entry</h2>
+        <p >Directions: Enter your answer into the box provided. Do not use units or special characters (e.g., $, feet, etc.). If answer is a fraction, enter in simplest form (i.e., 3/4 vs. 6/8)</p>
+        <form name="mathQ5" id="mathQ5" action="mathChecker.js">
+            <h2 class="h3">Q5. During a college fun-fair, the entrance fee for students was $12 and for teachers (and their family members) it was $30. 75 people came to attend that event and a total of $1800 was gathered. How many students came to this fun-fair?</h2>
+            <input type="text" id="mathText5" name="math5"><br>
+            <h2 class="h3">Q6. In a certain society, the ratio of unemployed people to employed people is 2:5 respectively. If there are 700 employed people in that society, how many are unemployed?</h2>
+            <input type="text" id="mathText6" name="math6"><br>
+        </form>
+    </div>
+
+    <br>
+
+    <input type="button" value="Submit Exam" onclick="submitMath()" class="h3"/>
+
+    <div>
+        <h2 id="mathResults" class="h3"></h2>
+    </div>
+
+    <script>
+    submitMath = function(){
+        let userScore = 0;
+        if (document.getElementById("math1D").checked) {
+            userScore ++;
+        }
+        if (document.getElementById("math2C").checked) {
+            userScore ++;
+        }
+        if (document.getElementById("math3A").checked) {
+            userScore ++;
+        }
+        if (document.getElementById("math4C").checked) {
+            userScore ++;
+        }
+        if (document.getElementById("mathText5").value == "25") {
+            userScore ++;
+        }
+        if (document.getElementById("mathText6").value == "200") {
+            userScore ++;
+        }
+        
+        document.getElementById("mathResults").innerHTML = "Results: "+ userScore + "/6";
+
+    }
+    </script>
+
+<style>
+            body {
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            .headerTop {
+                font-family: verdana;
+                border: none;
+            }
+            .topButton {
+                font-family: verdana;
+                color: #8fb0d6;
+                text-align: center;
+                font-size: 48px;
+                border: none;
+                display: inline-block;
+                padding: 15px 32px;
+                text-decoration: none;
+            }
+            .mh1 {
+                font-family: verdana;
+                color: #224b7a;;
+                text-align: center;
+                font-size: 120px;
+                border: none;
+                display: inline-block;
+                padding: 15px 32px;
+                text-decoration: none;
+            }
+            .h2 {
+                font-family: verdana;
+                color: #8fb0d6;;
+                text-align: center;
+                font-size: 70px;
+                border: none;
+                display: inline-block;
+                padding: 15px 32px;
+                text-decoration: none;
+
+            }
+            .h3 {
+                font-family: verdana;
+                color: #224b7a;
+                font-size: 50px;
+                border: none;
+                display: inline-block;
+                text-decoration: none;
+
+            }
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #224b7a;
+                color: white;
+                text-align: center;
+            }
+            </style>
+    <div class="footer">
+        <p>GRE Study Aid Demo for CS 361 - Jared Keirns</p>
+    </div>  
+</body>

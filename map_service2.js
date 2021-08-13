@@ -15,6 +15,16 @@ app.get('/',function(req,res){
   res.render('map_service_gui');
 });
 
+app.get('/2',function(req,res){
+  res.render('map_gui_2');
+});
+
+
+/*
+The below code acts as the server for another group member by receiving JSON data, 
+handling it, passing it to other functions as needed, and then returning a response.
+*/
+
 const http = require('http');
 
 http.createServer((request, response) => {

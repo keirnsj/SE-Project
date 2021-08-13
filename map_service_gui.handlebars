@@ -1,0 +1,956 @@
+<head>
+
+    <title>Mapping Interesting Application Additions Using the Google Maps API</title>
+    <style type="text/css">
+        html { height: 100%; }
+        body { height: 100%; margin: 0; padding: 0; }
+        #MapCanvas { height: 90%; }
+    </style>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg66T2Ih2JWNQzeKC42-appuf3hX6fcCs&sensor=false">
+    </script>
+    <script>
+            function GetMap() {
+                var Latitude = "47.478";
+                var Longitude = "-120.708";
+                var mapOptions = {
+                    center: new google.maps.LatLng(Latitude, Longitude),
+                    zoom: 7.1,
+                    mapTypeId: 'satellite'
+                }
+
+                const map = new google.maps.Map(document.getElementById("MapCanvas"),
+                mapOptions);
+
+                const lng2 = [-121.7983992590337, -121.5697919144425, -121.63045442266582, -121.8632452357795, -123.26839105165804, -123.93548645763256, -124.37621482879122, -124.608658184612, -124.66657722879373, -121.25982173509183, -121.26771815834053, -121.15181284371491, -121.15181284371491, -120.82949961837365, -118.96523826231757, -122.02213210361322, -122.03927744927135, -124.22845437594817, -119.94540279708727, -122.83847013792361, -122.63639819538656, -120.18702109556115, -121.79582529263438, -123.98321999177026, -120.16895120113134, -123.31698459269744, -117.17144032381725,-122.33596785309513];
+                const lat2 = [46.806000165618194, 46.776800984941566, 46.948405654537474, 46.98039255966651, 47.99526023326804, 47.85740467763709, 47.61316485535686, 47.91807138874722, 48.152905953988714, 48.6758233746402, 48.67627677748922, 48.71666766754367, 48.71666766754367, 47.401469090882884, 48.87540643347537, 46.731951700452186, 46.749920277419, 47.9238652595263, 48.0763605633329, 48.747907076236565, 48.439340508741935, 47.8939760468158, 48.08019690431177, 46.7010812166819, 48.470648877073934, 48.169179497691125, 47.73115732243329, 48.61036376323884];
+
+                const location1 = {lat: lat2[0], lng: lng2[0]};
+                const contentString1 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Cougar Rock</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Mount Rainier National Park<br/>" +
+                    "<b>Type: </b> National Park<br/>" +
+                    "<b>Feature: </b> Mountains<br/>" +
+                    "<b>Description: </b> Elevation of 3,180 ft., 173 sites, $20 fee, Season is late May-September. Website: https://www.nps.gov/mora/planyourvisit/campgrounds.htm<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow1 = new google.maps.InfoWindow({
+                content: contentString1,
+                });
+
+                mark1 = new google.maps.Marker({
+                    position: location1,
+                    map,
+                });
+
+                mark1.addListener("click", () => {
+                    infowindow1.open({
+                    anchor: mark1,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+                
+
+                const location2 = {lat: lat2[1], lng: lng2[1]};
+                const contentString2 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Ohanapecosh</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Mount Rainier National Park<br/>" +
+                    "<b>Type: </b> National Park<br/>" +
+                    "<b>Feature: </b> Mountains<br/>" +
+                    "<b>Description: </b> Elevation of 1,914 ft., 188 sites, $20 fee, Season is late May-September. Website: https://www.nps.gov/mora/planyourvisit/campgrounds.htm<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow2 = new google.maps.InfoWindow({
+                content: contentString2,
+                });
+
+                mark2 = new google.maps.Marker({
+                    position: location2,
+                    map,
+                });
+
+                mark2.addListener("click", () => {
+                    infowindow2.open({
+                    anchor: mark2,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location3 = {lat: lat2[2], lng: lng2[2]};
+                const contentString3 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">White River</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Mount Rainier National Park<br/>" +
+                    "<b>Type: </b> National Park<br/>" +
+                    "<b>Feature: </b> Mountains<br/>" +
+                    "<b>Description: </b> Elevation of 4,400 ft., 112 sites, $20 fee, Season is late June-September. Website: https://www.nps.gov/mora/planyourvisit/campgrounds.htm<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow3 = new google.maps.InfoWindow({
+                content: contentString3,
+                });
+
+                mark3 = new google.maps.Marker({
+                    position: location3,
+                    map,
+                });
+
+                mark3.addListener("click", () => {
+                    infowindow3.open({
+                    anchor: mark3,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location4 = {lat: lat2[3], lng: lng2[3]};
+                const contentString4 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Mowich Lake</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Mount Rainier National Park<br/>" +
+                    "<b>Type: </b> National Park<br/>" +
+                    "<b>Feature: </b> Mountains<br/>" +
+                    "<b>Description: </b> Elevation of 4,929 ft., 13 sites, no fee, Season is early July-October. Website: https://www.nps.gov/mora/planyourvisit/campgrounds.htm<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow4 = new google.maps.InfoWindow({
+                content: contentString4,
+                });
+
+                mark4 = new google.maps.Marker({
+                    position: location4,
+                    map,
+                });
+
+                mark4.addListener("click", () => {
+                    infowindow4.open({
+                    anchor: mark4,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+                const location5 = {lat: lat2[4], lng: lng2[4]};
+                const contentString5 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Deer Park</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Olympic National Park<br/>" +
+                    "<b>Type: </b> National Park<br/>" +
+                    "<b>Feature: </b> Mountains<br/>" +
+                    "<b>Description: </b> Elevation of 5,400 ft., 14 sites, $15 fee, Season is June to mid October. Website: https://www.nps.gov/olym/planyourvisit/camping.htm<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow5 = new google.maps.InfoWindow({
+                content: contentString5,
+                });
+
+                mark5 = new google.maps.Marker({
+                    position: location5,
+                    map,
+                });
+
+                mark5.addListener("click", () => {
+                    infowindow5.open({
+                    anchor: mark5,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location6 = {lat: lat2[5], lng: lng2[5]};
+                const contentString6 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Hoh Campground</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Olympic National Park<br/>" +
+                    "<b>Type: </b> National Park<br/>" +
+                    "<b>Feature: </b> Rain Forest<br/>" +
+                    "<b>Description: </b> Located in Hoh Rain Forest, 72 sites, $24 fee, Season is year round. Website: https://www.nps.gov/olym/planyourvisit/camping.htm<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow6 = new google.maps.InfoWindow({
+                content: contentString6,
+                });
+
+                mark6 = new google.maps.Marker({
+                    position: location6,
+                    map,
+                });
+
+                mark6.addListener("click", () => {
+                    infowindow6.open({
+                    anchor: mark6,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location7 = {lat: lat2[6], lng: lng2[6]};
+                const contentString7 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Kalaloch</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Olympic National Park<br/>" +
+                    "<b>Type: </b> National Park<br/>" +
+                    "<b>Feature: </b> Ocean<br/>" +
+                    "<b>Description: </b> Overlooking Pacific Ocean, 170 sites, $24 fee, Season is year round. Website: https://www.nps.gov/olym/planyourvisit/camping.htm<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow7 = new google.maps.InfoWindow({
+                content: contentString7,
+                });
+
+                mark7 = new google.maps.Marker({
+                    position: location7,
+                    map,
+                });
+
+                mark7.addListener("click", () => {
+                    infowindow7.open({
+                    anchor: mark7,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location8 = {lat: lat2[7], lng: lng2[7]};
+                const contentString8 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Mora</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Olympic National Park<br/>" +
+                    "<b>Type: </b> National Park<br/>" +
+                    "<b>Feature: </b> Rain Forest<br/>" +
+                    "<b>Description: </b> 94 sites, $24 fee, Season is year round. Website: https://www.nps.gov/olym/planyourvisit/camping.htm<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow8 = new google.maps.InfoWindow({
+                content: contentString8,
+                });
+
+                mark8 = new google.maps.Marker({
+                    position: location8,
+                    map,
+                });
+
+                mark8.addListener("click", () => {
+                    infowindow8.open({
+                    anchor: mark8,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location9 = {lat: lat2[8], lng: lng2[8]};
+                const contentString9 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Ozette</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Olympic National Park<br/>" +
+                    "<b>Type: </b> National Park<br/>" +
+                    "<b>Feature: </b> Lake<br/>" +
+                    "<b>Description: </b> Next to Lake Ozette. 15 sites, $20 fee, Season is year round. Website: https://www.nps.gov/olym/planyourvisit/camping.htm<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow9 = new google.maps.InfoWindow({
+                content: contentString9,
+                });
+
+                mark9 = new google.maps.Marker({
+                    position: location9,
+                    map,
+                });
+
+                mark9.addListener("click", () => {
+                    infowindow9.open({
+                    anchor: mark9,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location10 = {lat: lat2[9], lng: lng2[9]};
+                const contentString10 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Newhalem Creek</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>North Cascades National Park<br/>" +
+                    "<b>Type: </b> National Park<br/>" +
+                    "<b>Feature: </b> Mountains<br/>" +
+                    "<b>Description: </b> Elevation 500 feet, 107 sites. Website: https://www.nps.gov/noca/planyourvisit/camping.htm<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow10 = new google.maps.InfoWindow({
+                content: contentString10,
+                });
+
+                mark10 = new google.maps.Marker({
+                    position: location10,
+                    map,
+                });
+
+                mark10.addListener("click", () => {
+                    infowindow10.open({
+                    anchor: mark10,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location11 = {lat: lat2[10], lng: lng2[10]};
+                const contentString11 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Goodell Creek</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>North Cascades National Park<br/>" +
+                    "<b>Type: </b> National Park<br/>" +
+                    "<b>Feature: </b> Mountains<br/>" +
+                    "<b>Description: </b> Elevation 500 feet, 19 sites. Website: https://www.nps.gov/noca/planyourvisit/camping.htm<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow11 = new google.maps.InfoWindow({
+                content: contentString11,
+                });
+
+                mark11 = new google.maps.Marker({
+                    position: location11,
+                    map,
+                });
+
+                mark11.addListener("click", () => {
+                    infowindow11.open({
+                    anchor: mark11,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location12 = {lat: lat2[11], lng: lng2[11]};
+                const contentString12 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Gorge Lake</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>North Cascades National Park<br/>" +
+                    "<b>Type: </b> National Park<br/>" +
+                    "<b>Feature: </b> Lake<br/>" +
+                    "<b>Description: </b> Elevation 900 feet, 8 sites. Website: https://www.nps.gov/noca/planyourvisit/camping.htm<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow12 = new google.maps.InfoWindow({
+                content: contentString12,
+                });
+
+                mark12 = new google.maps.Marker({
+                    position: location12,
+                    map,
+                });
+
+                mark12.addListener("click", () => {
+                    infowindow12.open({
+                    anchor: mark12,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location13 = {lat: lat2[12], lng: lng2[12]};
+                const contentString13 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Colonial Creek North</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>North Cascades National Park<br/>" +
+                    "<b>Type: </b> National Park<br/>" +
+                    "<b>Feature: </b> Mountains<br/>" +
+                    "<b>Description: </b> Elevation 1200 feet, 41 sites. Website: https://www.nps.gov/noca/planyourvisit/camping.htm<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow13 = new google.maps.InfoWindow({
+                content: contentString13,
+                });
+
+                mark13 = new google.maps.Marker({
+                    position: location13,
+                    map,
+                });
+
+                mark13.addListener("click", () => {
+                    infowindow13.open({
+                    anchor: mark13,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+                const location14 = {lat: lat2[13], lng: lng2[13]};
+                const contentString14 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">29 Pines</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Kittitas County<br/>" +
+                    "<b>Type: </b> Public Land<br/>" +
+                    "<b>Feature: </b> Mountains<br/>" +
+                    "<b>Description: </b> No fee, currently closed.<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow14 = new google.maps.InfoWindow({
+                content: contentString14,
+                });
+
+                mark14 = new google.maps.Marker({
+                    position: location14,
+                    map,
+                });
+
+                mark14.addListener("click", () => {
+                    infowindow14.open({
+                    anchor: mark14,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location15 = {lat: lat2[14], lng: lng2[14]};
+                const contentString15 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Beaver Plant Lake</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Snohomish County<br/>" +
+                    "<b>Type: </b> Public Land<br/>" +
+                    "<b>Feature: </b> Lake<br/>" +
+                    "<b>Description: </b> No fee, currently closed.<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow15 = new google.maps.InfoWindow({
+                content: contentString15,
+                });
+
+                mark15 = new google.maps.Marker({
+                    position: location15,
+                    map,
+                });
+
+                mark15.addListener("click", () => {
+                    infowindow15.open({
+                    anchor: mark15,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location16 = {lat: lat2[15], lng: lng2[15]};
+                const contentString16 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Bruni\'s Snow Bowl Hut</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Lewis County<br/>" +
+                    "<b>Type: </b> Public Land<br/>" +
+                    "<b>Feature: </b> Mountains<br/>" +
+                    "<b>Description: </b> No fee, currently open.<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow16 = new google.maps.InfoWindow({
+                content: contentString16,
+                });
+
+                mark16 = new google.maps.Marker({
+                    position: location16,
+                    map,
+                });
+
+                mark16.addListener("click", () => {
+                    infowindow16.open({
+                    anchor: mark16,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+
+                const location17 = {lat: lat2[16], lng: lng2[16]};
+                const contentString17 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">High Hut</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Lewis County<br/>" +
+                    "<b>Type: </b> Public Land<br/>" +
+                    "<b>Feature: </b> Mountains<br/>" +
+                    "<b>Description: </b> No fee, currently closed.<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow17 = new google.maps.InfoWindow({
+                content: contentString17,
+                });
+
+                mark17 = new google.maps.Marker({
+                    position: location17,
+                    map,
+                });
+
+                mark17.addListener("click", () => {
+                    infowindow17.open({
+                    anchor: mark17,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location18 = {lat: lat2[17], lng: lng2[17]};
+                const contentString18 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Hoh Oxbow</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Jefferson County<br/>" +
+                    "<b>Type: </b> Public Land<br/>" +
+                    "<b>Feature: </b> Rain Forest<br/>" +
+                    "<b>Description: </b> No fee, currently open.<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow18 = new google.maps.InfoWindow({
+                content: contentString18,
+                });
+
+                mark18 = new google.maps.Marker({
+                    position: location18,
+                    map,
+                });
+
+                mark18.addListener("click", () => {
+                    infowindow18.open({
+                    anchor: mark18,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location19 = {lat: lat2[18], lng: lng2[18]};
+                const contentString19 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Alta Lake</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Alta Lake State Park<br/>" +
+                    "<b>Type: </b> State Park<br/>" +
+                    "<b>Feature: </b> Lake<br/>" +
+                    "<b>Description: </b> 93 campsites, $27 t0 $37, reserve at https://washington.goingtocamp.com/.<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow19 = new google.maps.InfoWindow({
+                content: contentString19,
+                });
+
+                mark19 = new google.maps.Marker({
+                    position: location19,
+                    map,
+                });
+
+                mark19.addListener("click", () => {
+                    infowindow19.open({
+                    anchor: mark19,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+                const location20 = {lat: lat2[19], lng: lng2[19]};
+                const contentString20 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Matia Island</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Matia Island State Park<br/>" +
+                    "<b>Type: </b> State Park<br/>" +
+                    "<b>Feature: </b> Ocean<br/>" +
+                    "<b>Description: </b> 6 campsites, $27 t0 $37, reserve at: https://washington.goingtocamp.com/.<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow20 = new google.maps.InfoWindow({
+                content: contentString20,
+                });
+
+                mark20 = new google.maps.Marker({
+                    position: location20,
+                    map,
+                });
+
+                mark20.addListener("click", () => {
+                    infowindow20.open({
+                    anchor: mark20,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location21 = {lat: lat2[20], lng: lng2[20]};
+                const contentString21 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Deception Pass</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Deception Pass State Park<br/>" +
+                    "<b>Type: </b> State Park<br/>" +
+                    "<b>Feature: </b> Ocean<br/>" +
+                    "<b>Description: </b> 172 campsites, $27 t0 $37, reserve at: https://washington.goingtocamp.com/.<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow21 = new google.maps.InfoWindow({
+                content: contentString21,
+                });
+
+                mark21 = new google.maps.Marker({
+                    position: location21,
+                    map,
+                });
+
+                mark21.addListener("click", () => {
+                    infowindow21.open({
+                    anchor: mark21,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location22 = {lat: lat2[21], lng: lng2[21]};
+                const contentString22 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Lake Chelan</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Lake Chelan State Park<br/>" +
+                    "<b>Type: </b> State Park<br/>" +
+                    "<b>Feature: </b> Lake<br/>" +
+                    "<b>Description: </b> 103 campsites, $27 t0 $37, reserve at: https://washington.goingtocamp.com/.<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow22 = new google.maps.InfoWindow({
+                content: contentString22,
+                });
+
+                mark22 = new google.maps.Marker({
+                    position: location22,
+                    map,
+                });
+
+                mark22.addListener("click", () => {
+                    infowindow22.open({
+                    anchor: mark22,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location23 = {lat: lat2[22], lng: lng2[22]};
+                const contentString23 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Mount Pilchuck</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Mount Pilchuck State Park<br/>" +
+                    "<b>Type: </b> State Park<br/>" +
+                    "<b>Feature: </b> Mountains<br/>" +
+                    "<b>Description: </b> Small camping area near trailhead, no dedicated campsites.<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow23 = new google.maps.InfoWindow({
+                content: contentString23,
+                });
+
+                mark23 = new google.maps.Marker({
+                    position: location23,
+                    map,
+                });
+
+                mark23.addListener("click", () => {
+                    infowindow23.open({
+                    anchor: mark23,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location24 = {lat: lat2[23], lng: lng2[23]};
+                const contentString24 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Bay Center Koa</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Bay Center, WA<br/>" +
+                    "<b>Type: </b> Private Land<br/>" +
+                    "<b>Feature: </b> Ocean<br/>" +
+                    "<b>Description: </b> Located on Willipa Bay, rates vary.<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow24 = new google.maps.InfoWindow({
+                content: contentString24,
+                });
+
+                mark24 = new google.maps.Marker({
+                    position: location24,
+                    map,
+                });
+
+                mark24.addListener("click", () => {
+                    infowindow24.open({
+                    anchor: mark24,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location25 = {lat: lat2[24], lng: lng2[24]};
+                const contentString25 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Winthrop/N. Cascades National Park Koa</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Winthrop, WA<br/>" +
+                    "<b>Type: </b> Private Land<br/>" +
+                    "<b>Feature: </b> Mountains<br/>" +
+                    "<b>Description: </b> Located in Winthrop WA near North Cascades National Park, rates vary.<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow25 = new google.maps.InfoWindow({
+                content: contentString25,
+                });
+
+                mark25 = new google.maps.Marker({
+                    position: location25,
+                    map,
+                });
+
+                mark25.addListener("click", () => {
+                    infowindow25.open({
+                    anchor: mark25,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location26 = {lat: lat2[25], lng: lng2[25]};
+                const contentString26 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Olympic Peninsula/Port Angeles Koa</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Port Angeles, WA<br/>" +
+                    "<b>Type: </b> Private Land<br/>" +
+                    "<b>Feature: </b> Mountains<br/>" +
+                    "<b>Description: </b> Located in Port Angeles near Olympic National Park, rates vary.<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow26 = new google.maps.InfoWindow({
+                content: contentString26,
+                });
+
+                mark26 = new google.maps.Marker({
+                    position: location26,
+                    map,
+                });
+
+                mark26.addListener("click", () => {
+                    infowindow26.open({
+                    anchor: mark26,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+                const location27 = {lat: lat2[26], lng: lng2[26]};
+                const contentString27 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Spokane Koa</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Spokane, WA<br/>" +
+                    "<b>Type: </b> Private Land<br/>" +
+                    "<b>Feature: </b> Mountains<br/>" +
+                    "<b>Description: </b> Located in Spokane, WA, rates vary.<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow27 = new google.maps.InfoWindow({
+                content: contentString27,
+                });
+
+                mark27 = new google.maps.Marker({
+                    position: location27,
+                    map,
+                });
+
+                mark27.addListener("click", () => {
+                    infowindow27.open({
+                    anchor: mark27,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location28 = {lat: lat2[27], lng: lng2[27]};
+                const contentString28 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Burlington/Anacortes Koa</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Anacortes, WA<br/>" +
+                    "<b>Type: </b> Private Land<br/>" +
+                    "<b>Feature: </b> Ocean<br/>" +
+                    "<b>Description: </b> Located in Anacortes, WA, rates vary.<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow28 = new google.maps.InfoWindow({
+                content: contentString28,
+                });
+
+                mark28 = new google.maps.Marker({
+                    position: location28,
+                    map,
+                });
+
+                mark28.addListener("click", () => {
+                    infowindow28.open({
+                    anchor: mark28,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+                
+            }
+    </script>
+</head>
+
+<body onload="GetMap()">
+    <div id="MapCanvas" style="width:100%; height:100%"></div>
+</body>

@@ -1,0 +1,189 @@
+<head>
+
+    <title>Mapping Interesting Application Additions Using the Google Maps API</title>
+    <style type="text/css">
+        html { height: 100%; }
+        body { height: 100%; margin: 0; padding: 0; }
+        #MapCanvas { height: 90%; }
+    </style>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg66T2Ih2JWNQzeKC42-appuf3hX6fcCs&sensor=false">
+    </script>
+    <script>
+            function GetMap() {
+                var Latitude = "39.9513";
+                var Longitude = "-82.5747";
+                var mapOptions = {
+                    center: new google.maps.LatLng(Latitude, Longitude),
+                    zoom: 7.1,
+                    mapTypeId: 'roadmap'
+                }
+
+                const map = new google.maps.Map(document.getElementById("MapCanvas"),
+                mapOptions);
+
+                const lng2 = [-82.1020, -82.0517, -82.9882, -83.0272, -84.3529];
+                const lat2 = [39.3242, 39.3352, 39.9684, 40.1110, 39.0754];
+
+                const location1 = {lat: lat2[0], lng: lng2[0]};
+                const contentString1 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Ohio University</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Athens, OH<br/>" +
+                    "<b>Type: </b> University<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow1 = new google.maps.InfoWindow({
+                content: contentString1,
+                });
+
+                mark1 = new google.maps.Marker({
+                    position: location1,
+                    map,
+                });
+
+                mark1.addListener("click", () => {
+                    infowindow1.open({
+                    anchor: mark1,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+                
+
+                const location2 = {lat: lat2[1], lng: lng2[1]};
+                const contentString2 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">American Universities Services</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Athens, OH<br/>" +
+                    "<b>Type: </b> Business<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow2 = new google.maps.InfoWindow({
+                content: contentString2,
+                });
+
+                mark2 = new google.maps.Marker({
+                    position: location2,
+                    map,
+                });
+
+                mark2.addListener("click", () => {
+                    infowindow2.open({
+                    anchor: mark2,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location3 = {lat: lat2[2], lng: lng2[2]};
+                const contentString3 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Columbus State Community College</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Columbus, OH<br/>" +
+                    "<b>Type: </b> College<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow3 = new google.maps.InfoWindow({
+                content: contentString3,
+                });
+
+                mark3 = new google.maps.Marker({
+                    position: location3,
+                    map,
+                });
+
+                mark3.addListener("click", () => {
+                    infowindow3.open({
+                    anchor: mark3,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+
+                const location4 = {lat: lat2[3], lng: lng2[3]};
+                const contentString4 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Prometric</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Worthington, OH<br/>" +
+                    "<b>Type: </b> Business<br/>" +
+                    "</div>" +
+                    "</div>";
+            
+
+                const infowindow4 = new google.maps.InfoWindow({
+                content: contentString4,
+                });
+
+                mark4 = new google.maps.Marker({
+                    position: location4,
+                    map,
+                });
+
+                mark4.addListener("click", () => {
+                    infowindow4.open({
+                    anchor: mark4,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+
+                const location5 = {lat: lat2[4], lng: lng2[4]};
+                const contentString5 = 
+                    '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    "</div>" +
+                    '<h1 id="firstHeading" class="firstHeading">Huntington Learning Center</h1>' +
+                    '<div id="bodyContent">' +
+                    "<p><b>Location: </b>Cincinnati, OH<br/>" +
+                    "<b>Type: </b> Non-Profit<br/>" +
+                    "</div>" +
+                    "</div>";
+
+                const infowindow5 = new google.maps.InfoWindow({
+                content: contentString5,
+                });
+
+                mark5 = new google.maps.Marker({
+                    position: location5,
+                    map,
+                });
+
+                mark5.addListener("click", () => {
+                    infowindow5.open({
+                    anchor: mark5,
+                    map,
+                    shouldFocus: false,
+                    });
+                });
+            
+
+               
+            }
+    </script>
+</head>
+
+<body onload="GetMap()">
+    <div id="MapCanvas" style="width:100%; height:100%"></div>
+</body>

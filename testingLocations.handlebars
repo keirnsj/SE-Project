@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="main_style.css" type="text/css">
+    <script>
+            function locationHelp() {
+            alert("You can click the Home button to go back to the home page. You can view the list of cities that testing locations are located in. You can interact with the map that displays testing locations and details.");
+            }
+        </script> 
+</head>
+<body onload="sendJSON()">
+    <div class="headerTop">
+        <a href="/" class="topButton">Home</a>
+        <button onclick="locationHelp()" class="topButton">Help</button>
+    </div>
+    <br/>
+    <div class="header">
+        <h1 class="mh1">GRE Study Aid</h1> <br>
+        <h2 class="h2">Testing Locations</h2>
+        <Script>
+            function sendJSON(){
+                
+                // Creating a XHR object
+                let xhr = new XMLHttpRequest();
+                let url = "http://flip1.engr.oregonstate.edu:59662/";
+            
+                xhr.open("POST", url, true);
+    
+                xhr.setRequestHeader("Content-Type", "application/json");
+    
+                // Create a state change callback
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+    
+                        // Print received data from server
+                        //map.innerHTML = this.responseText;
+    
+                    }
+                };
+    
+                // Converting JSON data to string
+                var data = [{"name": "Ohio University", "location": "Athens, OH", "type": "University", "coordinates": [39.3242, -82.1020]}] +
+                            {"name": "American Universities Services", "location": "Athens, OH", "type": "Business", "coordinates": [39.3352, -82.0517]}] +
+                            {"name": "Columbus State Community College", "location": "Columbus, OH", "type": "College", "coordinates": [39.9684, -82.9882]}] +
+                            {"name": "Prometric", "location": "Worthington, OH", "type": "Business", "coordinates": [40.1110, -83.0272]}] +
+                            {"name": "Huntington Learning Center", "location": "Cincinnati, OH", "type": "Non-Profit", "coordinates": [39.0754, -84.3529]}]];
+    
+                // Sending data with the request
+                xhr.send(data);
+            } 
+        </Script>
+    </div>
+        <div id="map_service" style="width:40%; height:30%; margin: auto; text-align: center;">
+            <iframe src="http://flip1.engr.oregonstate.edu:59661/2" width="800" height="600"></iframe>
+        </div>
+        
+        <ul class="h3" style="margin: auto;">
+            <li>Ohio</li>
+                <ul>
+                    <li>Columbus</li>
+                    <li>Athens</li>
+                    <li>Zanesville</li>
+                </ul>
+            <li>West Virginia</li>
+                <ul>
+                    <li>Morgantown</li>
+                    <li>Bridgeport</li>
+                    <li>Fairmont</li>
+                </ul>
+            <li>Oregon</li>
+                <ul>
+                    <li>Corvalis</li>
+                    <li>Salem</li>
+                    <li>Portland</li>
+                    <br>
+                </ul>
+        </ul>
+    <style>
+            body {
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            .headerTop {
+                font-family: verdana;
+                border: none;
+            }
+            .topButton {
+                font-family: verdana;
+                color: #8fb0d6;
+                text-align: center;
+                font-size: 48px;
+                border: none;
+                display: inline-block;
+                padding: 15px 32px;
+                text-decoration: none;
+            }
+            .mh1 {
+                font-family: verdana;
+                color: #224b7a;;
+                text-align: center;
+                font-size: 120px;
+                border: none;
+                display: inline-block;
+                padding: 15px 32px;
+                text-decoration: none;
+            }
+            .h2 {
+                font-family: verdana;
+                color: #8fb0d6;;
+                text-align: center;
+                font-size: 70px;
+                border: none;
+                display: inline-block;
+                padding: 15px 32px;
+                text-decoration: none;
+
+            }
+            .h3 {
+                margin: auto;
+                font-family: verdana;
+                color: #224b7a;
+                font-size: 50px;
+                border: none;
+                display: inline-block;
+                text-decoration: none;
+
+
+            }
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #224b7a;
+                color: white;
+                text-align: center;
+            }
+        </style>
+    <div class="footer">
+        <p>GRE Study Aid Demo for CS 361 - Jared Keirns</p>
+    </div>         
+</body>

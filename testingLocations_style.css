@@ -1,0 +1,42 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+.headerTop {
+    padding: 0px;
+    background: #000000;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    color: white;
+    font-size: 15px;
+  }
+.header {
+    padding: 15px;
+    left: center;
+    background: #000000af;
+    color: white;
+    font-size: 10px;
+  }
+h1 {
+    color: white;
+    font-size: 35px;
+    text-shadow: 2px 2px 4px #000000;
+}
+h2 {
+color: white;
+font-size: 15px;
+text-shadow: 2px 2px 4px #000000;
+}
+.footer {
+    padding: 0px;
+    text-align: center;
+    background: #000000;
+    color: white;
+    font-size: 30px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }  
+;

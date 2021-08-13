@@ -1,0 +1,179 @@
+<head>
+    <meta charset="UTF-8">
+    <title>GRE Study Aid</title>
+    <link rel="stylesheet" href="main_style.css" type="text/css">
+    <script>
+        function termSearch() {
+            var term = prompt("Please enter the term you would like to find", "Term");
+            let term2 = term.toLowerCase();
+            if (term != null) {
+                if (term2 == "absolute zero") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59660/chemistryTerms/absoluteZero";
+                    };
+                
+                if (term2 == "anomaly") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59660/generalTerms/anomaly";
+                    };
+
+                if (term2 == "assuage") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59660/generalTerms/assuage";
+                    };
+
+                if (term2 == "circumference") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59660/mathTerms/circumference";
+                    }; 
+
+                if (term2 == "cone") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59660/mathTerms/cone";
+                    };
+
+                if (term2 == "entropy") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59660/chemistryTerms/entropy";
+                    };
+
+                if (term2 == "equivocal") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59660/generalTerms/equivocal";
+                    }; 
+
+                if (term2 == "half-life") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59660/chemistryTerms/halfLife";
+                    };
+
+                if (term2 == "hypotenuse") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59660/mathTerms/hypotenuse";
+                    }; 
+
+                if (term2 == "ideal gas") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59660/chemistryTerms/idealGas";
+                    }; 
+
+                if (term2 == "lucid") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59660/generalTerms/lucid";
+                    }; 
+
+                if (term2 == "perimeter") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59660/mathTerms/perimeter";
+                    }; 
+
+                if (term2 == "photon") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59660/chemistryTerms/photon";
+                    }; 
+
+                if (term2 == "precipitate") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59660/generalTerms/precipitate";
+                    }; 
+
+                if (term2 == "supplementary") {
+                    window.location.href = "http://flip1.engr.oregonstate.edu:59660/mathTerms/supplementary";
+                                   
+                
+                } else {
+                    document.getElementById("noTerm").innerHTML =
+                    "Sorry, " + term + " is not a term we have";
+                }
+            }
+        }
+        </script>
+        <script>
+            function firstTermHelp() {
+            alert("You can click the Home button to go back to the home page. You can select which term list you would like to view based on subject. You can also search for a term using the Search function.");
+            }
+        </script>  
+</head>
+<body>
+    <div class="headerTop">
+        <a href="/" class="topButton">Home</a>
+        <button onclick="firstTermHelp()" class="topButton">Help</button>
+    </div>
+    <br/>
+    <div class="header">
+        <h1 class="mh1">Terms</h1> <br>
+        <h2 class="h3">What terms would you like to find?</h2>
+        <h2><a href="generalTerms" class="h2">General</a></h2>
+        <h2><a href="mathTerms" class="h2">Math</a></h2>
+        <h2><a href="chemistryTerms" class="h2">Chemistry</a></h2>
+    </div>
+    <div class="termFind">
+        <h3 class="h3">Manually search for terms.</h3>
+        <button onclick="termSearch()" class="searchButton">Search</button>
+        <p id="termPop"></p>
+    </div>
+    <p id="noTerm"></p>   
+<style>
+            body {
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            .headerTop {
+                font-family: verdana;
+                border: none;
+            }
+            .topButton {
+                font-family: verdana;
+                color: #8fb0d6;
+                text-align: center;
+                font-size: 48px;
+                border: none;
+                display: inline-block;
+                padding: 15px 32px;
+                text-decoration: none;
+            }
+            .mh1 {
+                font-family: verdana;
+                color: #224b7a;;
+                text-align: center;
+                font-size: 120px;
+                border: none;
+                display: inline-block;
+                padding: 15px 32px;
+                text-decoration: none;
+            }
+            .h2 {
+                font-family: verdana;
+                color: #8fb0d6;;
+                text-align: center;
+                font-size: 70px;
+                border: none;
+                display: inline-block;
+                padding: 15px 32px;
+                text-decoration: none;
+
+            }
+            .h3 {
+                font-family: verdana;
+                color: #224b7a;
+                text-align: center;
+                font-size: 50px;
+                border: none;
+                display: inline-block;
+                padding: 15px 32px;
+                text-decoration: none;
+
+            }
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #224b7a;
+                color: white;
+                text-align: center;
+            }
+            .searchButton {
+                background-color: #8fb0d6;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 32px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            </style>
+    <div class="footer">
+        <p>GRE Study Aid Demo for CS 361 - Jared Keirns</p>
+    </div>    
+</body>

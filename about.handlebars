@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="main_style.css" type="text/css">
+    <script>
+    function aboutHelp() {
+    alert("You can click the Home button to go back to the home page.");
+    }
+    </script>
+</head>
+<body>
+    <div class="headerTop">
+        <a href="/" class="topButton">Home</a>
+        <button onclick="aboutHelp()" class="topButton">Help</button>
+    </div>
+    <br/>
+    <div class="header">
+        <h1 class="mh1">GRE Study Aid </h1> <br>
+        <h2 class="h2">About</h2>
+        <div class="about_info">
+        This is is a prototype website made for students studying for the GRE.
+        </div>
+    </div>
+        <style>
+            body {
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            .headerTop {
+                font-family: verdana;
+                border: none;
+            }
+            .topButton {
+                font-family: verdana;
+                color: #8fb0d6;
+                text-align: center;
+                font-size: 48px;
+                border: none;
+                display: inline-block;
+                padding: 15px 32px;
+                text-decoration: none;
+            }
+            .mh1 {
+                font-family: verdana;
+                color: #224b7a;;
+                text-align: center;
+                font-size: 120px;
+                border: none;
+                display: inline-block;
+                padding: 15px 32px;
+                text-decoration: none;
+            }
+            .h2 {
+                font-family: verdana;
+                color: #8fb0d6;;
+                text-align: center;
+                font-size: 70px;
+                border: none;
+                display: inline-block;
+                padding: 15px 32px;
+                text-decoration: none;
+
+            }
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #224b7a;
+                color: white;
+                text-align: center;
+            }
+            </style>
+    <div class="footer">
+        <p>GRE Study Aid Demo for CS 361 - Jared Keirns</p>
+    </div>        
+</body>
